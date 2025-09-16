@@ -82,6 +82,7 @@
 				TargetAttributes = {
 					01A99F8C2E799D9300C0B92A = {
 						CreatedOnToolsVersion = 26.0;
+						LastSwiftMigration = 2600;
 					};
 				};
 			};
@@ -178,11 +179,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/swift-cplusplus-interop/include";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-nostdinc++",
+					"-isystem/Users/asamidoi/bling/src/third_party/libc++/src/include",
+					"-isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include",
+					"-I/Users/asamidoi/bling/src/buildtools/third_party/libc++",
+				);
+				OTHER_SWIFT_FLAGS = "-cxx-interoperability-mode=default -Xcc -nostdinc++ -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++/src/include -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include -Xcc -I/Users/asamidoi/bling/src/buildtools/third_party/libc++";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -236,10 +246,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/swift-cplusplus-interop/include";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-nostdinc++",
+					"-isystem/Users/asamidoi/bling/src/third_party/libc++/src/include",
+					"-isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include",
+					"-I/Users/asamidoi/bling/src/buildtools/third_party/libc++",
+				);
+				OTHER_SWIFT_FLAGS = "-cxx-interoperability-mode=default -Xcc -nostdinc++ -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++/src/include -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include -Xcc -I/Users/asamidoi/bling/src/buildtools/third_party/libc++";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -251,6 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TMFTYXG38Z;
@@ -272,6 +292,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -283,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TMFTYXG38Z;
