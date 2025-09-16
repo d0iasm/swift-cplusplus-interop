@@ -39,3 +39,9 @@ SwiftCompile normal arm64 /Users/asamidoi/swift-cplusplus-interop/swift-cplusplu
 /Users/asamidoi/bling/src/third_party/libc++/src/include/stdexcept:145:25: note: declaration of 'invalid_argument' does not match
   _LIBCPP_HIDE_FROM_ABI invalid_argument(const invalid_argument&) _NOEXCEPT            = default;
 ```
+
+## Workaround to avoid the module errors
+
+Add a wrapper moudle to include all sub modules.
+See this commit: https://github.com/d0iasm/swift-cplusplus-interop/commit/52f7b8b99ac1c5c87aac65cfd2430a0b4d99e2f5
+It solves the module errors.
