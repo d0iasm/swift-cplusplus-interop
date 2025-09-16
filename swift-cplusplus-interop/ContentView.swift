@@ -2,12 +2,11 @@
 //  ContentView.swift
 //  swift-cplusplus-interop
 //
-//  Created by Asami Doi on 16/09/2025.
-//
 
 import SwiftUI
-import forestLib
-import forestLib2
+import wrapper
+//import forestLib
+//import forestLib2
 
 struct ContentView: View {
     var body: some View {
