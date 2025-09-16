@@ -189,7 +189,10 @@
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -249,6 +252,9 @@
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_STRICT_MEMORY_SAFETY = YES;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -274,6 +280,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				MARKETING_VERSION = 1.0;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -282,7 +289,9 @@
 					"-isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include",
 					"-I/Users/asamidoi/bling/src/buildtools/third_party/libc++",
 					"-I$(SRCROOT)/swift-cplusplus-interop/include",
+					"-stdlib=libc++",
 				);
+				OTHER_LDFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-cxx-interoperability-mode=default -Xcc -nostdinc++ -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++/src/include -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include -Xcc -I/Users/asamidoi/bling/src/buildtools/third_party/libc++ -explicit-module-build -Xcc -I$(SRCROOT)/swift-cplusplus-interop/include";
 				PRODUCT_BUNDLE_IDENTIFIER = "google.swift-cplusplus-interop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,9 +299,10 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -318,6 +328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MARKETING_VERSION = 1.0;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -326,7 +337,9 @@
 					"-isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include",
 					"-I/Users/asamidoi/bling/src/buildtools/third_party/libc++",
 					"-I$(SRCROOT)/swift-cplusplus-interop/include",
+					"-stdlib=libc++",
 				);
+				OTHER_LDFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-cxx-interoperability-mode=default -Xcc -nostdinc++ -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++/src/include -Xcc -isystem/Users/asamidoi/bling/src/third_party/libc++abi/src/include -Xcc -I/Users/asamidoi/bling/src/buildtools/third_party/libc++ -explicit-module-build -Xcc -I$(SRCROOT)/swift-cplusplus-interop/include";
 				PRODUCT_BUNDLE_IDENTIFIER = "google.swift-cplusplus-interop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -334,8 +347,9 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
