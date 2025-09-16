@@ -1,5 +1,13 @@
 # Minimum app to reproduce the module errors.
 
+## Steps to reproduce
+
+1. Clone this repository
+2. Pull the source code for Chromium: https://chromium.googlesource.com/chromium/src/+/main/docs/ios/build_instructions.md
+3. Update the pathes in `project.pbxproj` from /Users/asamidoi/bling/src to the path where the Chromium source code exists
+4. You may need to clear caches by `rm -rf ~/Library/Developer/Xcode/DerivedData/*`
+5. Build the app. You will see the error messages like below
+
 ## Errors
 
 ```
@@ -31,11 +39,3 @@ SwiftCompile normal arm64 /Users/asamidoi/swift-cplusplus-interop/swift-cplusplu
 /Users/asamidoi/bling/src/third_party/libc++/src/include/stdexcept:145:25: note: declaration of 'invalid_argument' does not match
   _LIBCPP_HIDE_FROM_ABI invalid_argument(const invalid_argument&) _NOEXCEPT            = default;
 ```
-
-## Steps to reproduce
-
-1. Close this repository
-2. Pull the source code for Chromium: https://chromium.googlesource.com/chromium/src/+/main/docs/ios/build_instructions.md
-3. Update the pathes in `project.pbxproj` from /Users/asamidoi/bling/src to the path where the Chromium source code exists
-4. You may need to clear caches by `rm -rf ~/Library/Developer/Xcode/DerivedData/*`
-5. Build the app. You will see the above error messages
